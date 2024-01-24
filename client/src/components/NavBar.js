@@ -19,21 +19,32 @@ const NavBar = observer(() => {
 
 
     return (
-        <Navbar bg="danger" data-bs-theme="white">
-            <Container className=' d-flex justify-content-center align-items-center'>
-                {/* лого */}
+        <Navbar bg="black" data-bs-theme="white">
+            <Container className=' d-flex justify-content-between align-items-center'>
                 <Nav className="" style={{ color: 'black' }}>
-                    <Button variant="outline-light" onClick={() => history.push(SHOP_ROUTE)} className="m-lg-2">Didi</Button>
+                    <Button 
+                        variant="outline-light" 
+                        onClick={() => history.push(SHOP_ROUTE)} 
+                        className="m-lg-2">Панель клиента
+                    </Button>
                 </Nav>
-                {/* Вход либо авторизованного, либо не авторизованного юзера */}
+                <div className="" style={{ color: 'white' }}>Оформить заказ по тел/email</div>
+                <div className="" style={{ color: 'white' }}>8-(999)-999-99-99</div>
+                <div className="" style={{ color: 'white' }}>admin@shop.com</div>
                 {user.isAuth ?
                     <Nav className="" style={{ color: 'black' }}>
-                        <Button className="" variant="outline-light" onClick={() => history.push(ADMIN_ROUTE)}>Панель управления</Button>
-                        <Button variant="outline-light" className="ms-xl-2 m-auto" onClick={() => logOut()}>Выйти</Button>
+                        <Button variant="outline-light" onClick={() => history.push(ADMIN_ROUTE)}>
+                            Панель менеджера    
+                        </Button>
+                        <Button variant="outline-light" className="ms-xl-2 m-auto" onClick={() => logOut()}>
+                            Выйти
+                        </Button>
                     </Nav>
                     :
                     <Nav className="" style={{ color: 'black' }}>
-                        <Button className=''variant='outline-light' onClick={() => history.push(LOGIN_ROUTE)}>Войти</Button>
+                        <Button className=''variant='outline-light' onClick={() => history.push(LOGIN_ROUTE)}>
+                            Войти
+                        </Button>
                     </Nav>
                 }
             </Container>

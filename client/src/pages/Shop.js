@@ -36,10 +36,9 @@ useEffect(() => {
                 <CategoryBar />
             </Col>  
             <Col md={10}>
-            <h2 className='d-flex mt-2 m-end'>Товары</h2>
+            <h2 className='d-flex mt-2 m-end'>Товары со скидками</h2>
               <FoodList />
               <Pages/>
-
             </Col>
         </Row>
     </Container>

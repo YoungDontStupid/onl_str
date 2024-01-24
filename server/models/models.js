@@ -1,11 +1,5 @@
-// Описание моделей схемы БД
-
 const sequelize = require('../db')
 const {DataTypes} = require('sequelize')
-
-// primaryKey - первичный ключ, 
-//autoIncr - при создании каждого обьекта id будет 1,2,3...,
-//allowNull - должно быть заполнено
 
 const User = sequelize.define('user', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
@@ -45,13 +39,9 @@ const FoodInfo = sequelize.define('food_info', {
     description: {type: DataTypes.STRING, allowNull: false},
 })
 
-// связующая таблица между type и category
 const TypeCategory = sequelize.define('type_category', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
-
-
-// Типы связей моделей между ними
 
 User.hasOne(Basket)
 Basket.belongsTo(User)
@@ -65,7 +55,7 @@ Food.belongsTo(Type)
 Category.hasMany(Food)
 Food.belongsTo(Category)
 
-Food.hasMany(BasketFood) // может быть hasOne?
+Food.hasMany(BasketFood)
 BasketFood.belongsTo(Food)
 
 Food.hasMany(FoodInfo, {as: 'info'});

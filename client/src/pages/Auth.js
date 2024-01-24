@@ -39,7 +39,7 @@ const Auth = observer(() => {
     >
       {/* карта с рамкой */}
       <Card style={{ width: 750 }} className="p-5">
-        <h2 className='m-auto' style={{color:"red"}}>{isLogin ? 'Авторизация' : 'Регистрация'}</h2>
+        <h2 className='m-auto' style={{color:"black"}}>{isLogin ? 'Авторизация' : 'Регистрация'}</h2>
         <Form className='d-flex flex-column'>
           <Form.Control
             className='mt-3'
@@ -55,19 +55,18 @@ const Auth = observer(() => {
             type="password"
           />
           <Row className="d-flex justify-content-between mt-3 pl-3 pr-3">
-            <Button variant={"outline-danger"} onClick={click}>
+            <Button variant={"outline-dark"} onClick={click}>
               {isLogin ? 'Войти' : 'Зарегистрироваться'}
             </Button >
             {isLogin ? <div className="mt-3">
-              <NavLink style={{color:"red"}} to={REGISTRATION_ROUTE}>Регистрация</NavLink>
+              {/* <NavLink style={{color:"red"}} to={REGISTRATION_ROUTE}>Регистрация</NavLink> */}
             </div>
               :
               <div className="mt-3">
-                <NavLink style={{color:"red"}} to={LOGIN_ROUTE}>Войти</NavLink>
+                <NavLink style={{color:"black"}} to={LOGIN_ROUTE}>Войти</NavLink>
               </div>
             }
           </Row>
-
         </Form>
       </Card>
     </Container>

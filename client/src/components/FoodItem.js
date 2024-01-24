@@ -7,8 +7,8 @@ import { FOOD_ROUTE } from '../utils/consts';
 const FoodItem = observer(({ food }) => {
     const history = useHistory()
     return (
-            < Col md = {2} className = 'mt-3' onClick={() => history.push(FOOD_ROUTE + '/' + food.id)}>
-                <Card style={{ width: 150, cursor: 'pointer' }} border={'light'} className='br-20'>
+            < Col md = {6} className = 'mt-3' onClick={() => history.push(FOOD_ROUTE + '/' + food.id)}>
+                <Card style={{ width: 150, cursor: 'pointer' }} border={'white'} className='br-20'>
                     <Image width={150} height={150} src={process.env.REACT_APP_API_URL + food.img}/>
                     <div className='mt-1 m-auto p-1'>
                         <div>{food.name}</div>

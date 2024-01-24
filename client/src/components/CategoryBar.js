@@ -10,8 +10,8 @@ const CategoryBar = observer(() => {
 
         <ListGroup  className='mt-4'>
             {food.categorys.map(category =>
-                <ListGroup.Item variant="danger" 
-                    style={{cursor: 'pointer', color: 'light', background:'#f06b79'}}
+                <ListGroup.Item variant="light" 
+                    style={{cursor: 'pointer', color: 'light'}}
                     active={category.id === food.selectedCategory.id}
                     onClick={() => food.setSelectedCategory(category)}
                     //onClick=(() => food.openSelectedTypeCategory(category))

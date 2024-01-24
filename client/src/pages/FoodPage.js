@@ -35,9 +35,8 @@ const FoodPage = () => {
                 </Row>
               )}
           </div>
-          <Button variant='outline-danger' className='mt-2 '>Добавить в корзину</Button>
+          {/* <Button variant='outline-dark' className='mt-2 '>Добавить в корзину</Button> */}
         </Col>
-
     </Container>
   );
 }

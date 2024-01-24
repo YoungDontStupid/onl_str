@@ -40,7 +40,6 @@ const CreateFood = observer(({ show, onHide }) => {
         createFood(formData).then(data => onHide())
     }
 
-
     return (
         <Modal
             show={show}
@@ -103,7 +102,6 @@ const CreateFood = observer(({ show, onHide }) => {
                                         value={i.description}
                                         onChange={(e) => changeInfo('description', e.target.value, i.number)}
                                         placeholder="Введите описание"
-
                                     />
                                 </Col>
                                 <Col md={4}>
@@ -123,7 +121,6 @@ const CreateFood = observer(({ show, onHide }) => {
                 <Button variant="outline-success" onClick={addFood}>Добавить</Button>
             </Modal.Footer>
         </Modal>
-
     );
 })
 

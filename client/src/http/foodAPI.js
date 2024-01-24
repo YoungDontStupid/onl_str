@@ -5,6 +5,11 @@ export const createCategory = async (category) => {
     return data
 }
 
+export const deleteCategory = async (category) => {
+    const {data} = await $authHost.delete('api/category', category)
+    return data
+}
+
 export const fetchCategorys = async () => {
     const {data} = await $host.get('api/category')
     return data

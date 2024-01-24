@@ -31,7 +31,6 @@ const CreateCategory = ({ show, onHide }) => {
           <Form.Control
             value={value}
             onChange={e => setValue(e.target.value)}
-
             placeholder={"Введите название категории"}
           />
         </Form>

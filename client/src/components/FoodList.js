@@ -6,10 +6,13 @@ import FoodItem from './FoodItem';
 
 const FoodList = observer(() => {
     const {food} = useContext(Context)
+
     return (
-        <Row className='d-flex'>
+        <Row className='d-flex m-auto'>
             {food.foods.map(food => 
-                <FoodItem key={food.id} food={food}/>
+                <FoodItem 
+                    key={food.id} food={food}
+                />
             )}
         </Row>
     )
